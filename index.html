@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggler</title>
+    <style>
+        body{
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        height: 100vh;
+        }
+        .title{
+            text-align: center;
+        }
+        .container{
+           background-color: #fff;
+           width: 400px;
+           margin: 10px auto;
+           justify-content: center;
+           border-radius: 10px;
+           display: flex;
+           border-radius: 5px;
+           padding: 2px 2px;
+           margin-top: 60px;
+        }
+        
+        @media screen and (max-width:600px) {
+          .container{
+            width: 80px;
+          }
+            
+        }
+
+        .btn{
+            font-size: 20px;
+            padding: 5px 20px;
+            border-radius: 40px;
+            border: none;
+            margin: 0 20px;
+            cursor: pointer;
+           
+        }
+
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn:hover{
+            box-shadow: 0 0 1px 2px;
+        }
+
+        .btn-on{
+            background-color: green;
+        }
+        .btn-off{
+            background-color: red;
+        }
+        @media  screen and (max-width: 600px) {
+           .container{
+             width:300px;
+           } 
+        }
+    </style>
+</head>
+<body>
+   <h1 class="title">Emotion Toggler</h1>
+    <div class="container">
+   <img src="sad-face.png" class="img" height="250px" id="face"/>
+     </div>
+
+     <div class="btn-container">
+   <button class="btn btn-on" onclick="happy()">On</button>
+   <button class="btn btn-off" onclick="sad()">Off</button>
+   </div>
+   <script>
+    function happy(){
+        const faceElement = document.getElementById('face');
+        faceElement.src ='smile.png';
+    }
+
+    function sad(){
+        const faceElement = document.getElementById('face');
+        faceElement.src ='sad-face.png';
+    }
+   </script>
+</body>
+</html>
+
